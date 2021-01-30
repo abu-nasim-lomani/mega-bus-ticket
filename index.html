@@ -133,6 +133,7 @@
                 <p>Travel From: <span id="departureFrom"></span><br> Travel To: <span id="departureTo"></span></p>
                 <!-- <label>Date</label> -->
                 <p>Departure Date: <span id="departure"></span><br> Return Date: <span id="return"></span></p>
+                <p>First Class Ticket : <span id="superiorTicket"></span><br> Economy Ticket : <span id="economyTicket"></span></p>
                 <h4>Total Amount : $<span id="total-Amount">00</span></h4>
                 <button class="btn btn-success" onclick="displayHandler('greetings', 'booking-form')">Back</button>
                 <button class="btn btn-success float-right"
@@ -186,7 +187,7 @@
             return TicketTypeCount;
         }
 
-        // Extra Feature
+        // Extra Feature function
         document.getElementById('booking-btn').addEventListener('click', function () {
             document.getElementById('booking-form').style.display = "none";
             document.getElementById('greetings').style.display = "block";
@@ -194,6 +195,8 @@
             getValue('departure-To', 'departureTo');
             getValue('departure-input', 'departure');
             getValue('return-input', 'return');
+            getValue('superior-count', 'superiorTicket');
+            getValue('economy-count', 'economyTicket');
             const amountInput = document.getElementById('totalAmount').innerText;
             document.getElementById('total-Amount').innerText = amountInput;
 
